@@ -30,14 +30,15 @@ resource "google_storage_bucket" "GCS" {
 
   }
 
- labels = {
+  labels = {
     owner = "hybridenv"
-    gcp_region = "us"
     application_division = "pci"
-    application_name = "demo"
+    application_name = "app1"
     application_role = "auth"
     au = "0223092"
-    environment = "dev"
+    gcp_region = "us" 
+    environment = "dev" 
+    created = "20211124" 
   }
   depends_on = [
       google_kms_crypto_key.secret, google_kms_crypto_key_iam_member.gcs_encryption
