@@ -31,11 +31,12 @@ resource "google_storage_bucket" "GCS" {
   }
 
  labels = {
-    owner = "wf"
-    application_division = "pci"
-    application_name = ""
-    application_role = "auth"
-    au = ""
+    owner = "["wf","hybridenv"]" 
+    application_division = "["pci", "paa", "hdpa", "hra", "others"]"
+    application_name = "["app1","demo"]"
+    application_role = "["app", "web", "auth", "data"]"
+    au = "0223092"
+    prefix = "us-"
   }
   depends_on = [
       google_kms_crypto_key.secret, google_kms_crypto_key_iam_member.gcs_encryption
