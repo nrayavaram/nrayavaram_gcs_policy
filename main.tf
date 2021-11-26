@@ -31,7 +31,7 @@ resource "google_storage_bucket" "GCS" {
   }
 
  labels = {
-    owner = "wf"
+    owner = "hybridenv"
     gcp_region = "us"
     application_division = "pci"
     application_name = "demo"
