@@ -31,8 +31,8 @@ resource "google_storage_bucket" "GCS" {
   }
 
  labels = {
-    owner = "["wf","hybridenv"]" 
-    application_division = "["pci", "paa", "hdpa", "hra", "others"]"
+    owner = ["wf","hybridenv"] 
+    application_division = ["pci", "paa", "hdpa", "hra", "others"]
     application_name = "["app1","demo"]"
     application_role = "["app", "web", "auth", "data"]"
     au = "0223092"
