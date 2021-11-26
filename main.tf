@@ -31,10 +31,12 @@ resource "google_storage_bucket" "GCS" {
   }
 
  labels = {
-    owner = "wf" 
+    owner = "wf"
+    gcp_region = "us"
     application_division = "pci"
     application_name = "demo"
     application_role = "auth"
+    environment = "dev"
     au = "0223092"
     prefix = "us-"
   }
