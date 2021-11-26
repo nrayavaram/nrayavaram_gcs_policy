@@ -47,12 +47,15 @@ resource "google_storage_bucket" "GCS" {
 
 resource "google_kms_crypto_key" "secret" {
  name     = "my-dev-appid-strg-demo9-key"
- labels = {
-    owner = "wf"
+  labels = {
+    owner = "hybridenv"
     application_division = "pci"
-    application_name = ""
+    application_name = "app1"
     application_role = "auth"
-    au = ""
+    au = "0223092"
+    gcp_region = "us" 
+    environment = "dev" 
+    created = "20211124" 
   }
  key_ring = "projects/airline1-sabre-wolverine/locations/us/keyRings/savita-keyring-us"
 }
