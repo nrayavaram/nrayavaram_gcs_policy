@@ -57,7 +57,7 @@ resource "google_kms_crypto_key" "secret" {
     environment = "dev" 
     created = "20211124" 
   }
- rotation_period = "100000s"
+ rotation_period = "7776000s"
  key_ring = "projects/airline1-sabre-wolverine/locations/us/keyRings/savita-keyring-us"
 }
 
