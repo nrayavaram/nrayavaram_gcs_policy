@@ -46,7 +46,7 @@ resource "google_storage_bucket" "GCS" {
 }
 
 resource "google_kms_crypto_key" "secret" {
- name     = "my-dev-appid-strg-demo8-key"
+ name     = "my-dev-appid-strg-demo11-key"
   labels = {
     owner = "hybridenv"
     application_division = "pci"
