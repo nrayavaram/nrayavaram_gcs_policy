@@ -58,6 +58,7 @@ resource "google_kms_crypto_key" "secret" {
     created = "20211124" 
   }
  rotation_period = "7776000s"
+ skip_initial_version_creation = true
  key_ring = "projects/airline1-sabre-wolverine/locations/us/keyRings/savita-keyring-us"
 }
 
